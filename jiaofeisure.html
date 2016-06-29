@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0"/>
+  <title>缴纳确认</title>
+  <link rel="stylesheet" href="css/wylm.css">
+</head>
+<body>
+<div class="wylm_dl">
+  <div class="wylm_header">
+        <a href="#" class="icon_back">＜返回</a>
+        <h3>缴纳确认</h3>
+        <a href="#" class="icon_menu">...</a>
+  </div>
+  <ul class="wylm_ul">
+    <li>
+      <label for="zfdallor">支付金额：<input type="text" value="1000.00元"  id="zfdallor"></label>
+    </li>
+    <li>
+       <label for="wymc">物业名称：<input type="text" value="瑞邦物业服务有限公司" id="wymc"></label>
+    </li>
+    <li>
+        <label for="jyrq">交易日期：<input type="text" value="2016-6-15" id="jyrq"></label>
+    </li>
+    <li>
+       <label for="yuefen">月&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;份：<input type="text" value="2016-6至2016-7" id="yuefen"></label>
+    </li>
+    <li>
+      <label for="beizhu">备&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;注：<input type="text" value="物业费" id="beizhu"></label>
+    </li>
+  </ul>
+  <div class="wylm_zhifu">
+      <input type="button" value="确认支付" class="wylm_button">
+      <input type="button" value="取消支付" class="wylm_button wylm_btn2" >
+  </div>
+</div>
+
+   <!--弹出框-->
+    <div class="wylm_win" style="display:none;">
+        <div class="wylm_win_box">
+            <div class="wylm_win_box_text">
+                您确认取消支付吗？
+            </div>
+            <div class="wylm_btn_box clearfix">
+                <a href="javascript:;" class="cancel">取消</a>
+                <a href="javascript:;" class="submit">确定</a>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
+<script>
+  window.onload = function(){
+   delectFuc();
+  }
+
+  function delectFuc(){
+    var cancelPay = document.getElementsByClassName("wylm_btn2")[0];
+    var wylmBox = document.getElementsByClassName("wylm_win")[0];
+    var wylmBoxChild = document.getElementsByClassName("wylm_win_box")[0];
+    // 点击取消支付按钮
+    cancelPay.onclick = function(){
+      wylmBox.style.display="block";
+    }
+    // 点击取消
+      wylmBoxChild.getElementsByClassName('cancel')[0].onclick = function(){
+        wylmBox.style.display = 'none';
+        wylmBoxChild.className = 'wylm_win_box';
+    }
+    // 点击确认
+    wylmBoxChild.getElementsByClassName('submit')[0].onclick = function(){
+        window.location.href ="";
+    }
+  }
+</script>

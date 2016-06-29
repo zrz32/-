@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0"/>
+  <title>缴纳物业费</title>
+  <link rel="stylesheet" href="css/wylm.css">
+<!--   日期插件css -->
+ <link href="css/mobiscroll_002.css" rel="stylesheet" type="text/css">
+  <link href="css/mobiscroll.css" rel="stylesheet" type="text/css">
+  <link href="css/mobiscroll_003.css" rel="stylesheet" type="text/css">
+<!--   日期插件js -->
+  <script src="js/jquery.1.7.2.min.js"></script>
+  <script src="js/mobiscroll_002.js" type="text/javascript"></script>
+  <script src="js/mobiscroll_004.js" type="text/javascript"></script>
+  <script src="js/mobiscroll.js" type="text/javascript"></script>
+  <script src="js/mobiscroll_003.js" type="text/javascript"></script>
+  <script src="js/mobiscroll_005.js" type="text/javascript"></script>
+  <script src="js/wylm_date.js" type="text/javascript"></script>
+
+</head>
+<body>
+ <div class="wylm_dl">
+  <div class="wylm_header">
+        <a href="#" class="icon_back">＜返回</a>
+        <h3>缴纳确认</h3>
+        <a href="#" class="icon_menu">...</a>
+  </div>
+  <ul class="wylm_ul">
+    <li>
+       <label for="wymc">物业名称：<input type="text" placeholder="瑞邦物业服务有限公司" id="wymc"></label>
+    </li>
+    <li>
+        <label for="jyrq">缴费项目：<input type="text" placeholder="物业费" id="jyrq"></label>
+    </li>
+    <li>
+       <label for="yuefen">金&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;额：<input type="text" placeholder="1000.00元" id="yuefen"></label>
+    </li>
+  </ul>
+  <div class="wylm_date">
+       <label for="appDate">选择日期：</label>
+       <input value="" class="" readonly="readonly" name="appDate" id="appDate" type="text">
+       <span>至</span>
+       <input value="" class="" readonly="readonly" name="appDate" id="appDate2" type="text">
+  </div>
+  <div class="wylm_jifen">
+    <input type="checkbox"/>&nbsp;&nbsp;使用积分抵扣
+    <span>当前可用积分 10000积分</span>
+  </div>
+  <div class="wylm_dikou">积分抵扣-1000元</div>
+  <div class="wylm_dikou">积分抵扣0.00元，投资即可获得积分。</div>
+  <div class="wylm_zhifu">
+      <input type="button" value="支付" class="wylm_button">
+  </div>
+</div>
+
+</body>
+</html>

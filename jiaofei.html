@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0"/>
+  <title>缴费</title>
+  <link rel="stylesheet" href="css/wylm.css">
+
+</head>
+<body>
+<div class="wylm_dl">
+  <div class="wylm_header">
+        <a href="#" class="icon_back">＜返回</a>
+        <h3>缴费</h3>
+        <a href="#" class="icon_menu">...</a>
+  </div>
+  <form action="">
+  <div class="zselect">
+<!--     <div class="icon_xiaoqu">∨</div> -->
+      <ul>
+      <li class="on icon_on">居住小区</li>
+      <li>居民小区1</li>
+      <li>居民小区2</li>
+      <li>居民小区3</li>
+    </ul>
+  </div>
+    <input type="text" placeholder="开户银行" class="wylm_inp" />
+    <input type="text" placeholder="输入银行卡号"  class="wylm_inp"/>
+    <input type="text" placeholder="输入支行名称"  class="wylm_inp"/>
+     <input type="button" value="去缴费" class="wylm_button">
+  </form>
+</div>
+</body>
+</html>
+<script>
+window.onload = function(){
+  xiaoquSelect("li");
+}
+
+function xiaoquSelect(li){
+   var lis = document.getElementsByClassName('zselect')[0].getElementsByTagName(li);
+    for(var i = 0; i < lis.length; i++){
+        lis[i].onclick = function(){
+            if(this.parentNode.getAttribute('_zxs') == 'show'){
+                for(var j = 0; j < lis.length; j++){ lis[j].style.display = 'none';}
+                this.className = 'on';
+                this.style.color="#000";
+                this.style.display = 'block';
+                this.parentNode.setAttribute('_zxs','hide');
+            }else{
+                for(var j = 0; j < lis.length; j++){ lis[j].style.display = 'block';}
+                this.parentNode.setAttribute('_zxs','show');
+            }
+        };
+    }
+}
+</script>

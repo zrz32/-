@@ -1,0 +1,440 @@
+*,
+::before,
+::after{
+    margin: 0;
+    padding: 0;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-box-sizing: border-box;
+}
+body{
+    font-size: 14px;
+    font-family: "Microsoft YaHei",sans-serif;
+    color: #000;
+    background-color: #eee;
+}
+a{
+    text-decoration: none;
+    color: #000;
+}
+ul{
+    list-style: none;
+}
+input,textarea,select,option{
+    border: none;
+    resize: none;
+    outline: none;
+}
+.clearfix::before,
+.clearfix::after{
+    content: ".";
+    display: block;
+    height: 0;
+    line-height: 0;
+    visibility: hidden;
+    clear: both;
+}
+
+/*公用header*/
+.wylm_header {
+    width: 100%;
+    height: 40px;
+    background: rgba(0,0,0,.6);
+    position: fixed;
+    top: 0;
+    left:0;
+}
+.wylm_header .icon_back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color:#fff;
+    padding-left: 3%;
+    line-height: 40px;
+}
+.wylm_header h3 {
+    font-size: 16px;
+    color:#fff;
+    line-height: 40px;
+    text-align: center;
+}
+.wylm_header .icon_menu {
+    color:#fff;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding-right: 3%;
+    line-height: 30px;
+    font-size: 20px;
+}
+.wylm_layout{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index:-1;
+}
+.wylm_layout img {
+    width: 100%;
+    height: 99.7%;
+}
+.wylm_btn{
+    width: 80%;
+    position: absolute;
+    bottom:13%;
+    left:50%;
+    margin-left:-30%;
+}
+.wylm_a {
+    display:block;
+    width: 80%;
+    border:2px solid #fff;
+    border-radius: 5px;
+    font-size: 1.5em;
+    text-align: center;
+    line-height: 40px;
+    color:#fff;
+    cursor: pointer;
+}
+.wylm_a1 {
+    margin-bottom: 7px;
+}
+.wylm_dl {
+    width: 100%;
+    height: 100%;
+    background-color: #eee;
+    position: relative;
+    margin:0 auto;
+}
+.wylm_dl form {
+    margin-top: 50px;
+    position: relative;
+}
+.wylm_dl form span {
+    width: 12px;
+    height: 20px;
+    position: absolute;
+    top:12%;
+    left: 4%;
+    background: url(../images/shouji.jpg) no-repeat;
+    background-size: 100% 100% ;
+}
+.wylm_dl form i {
+    width: 12px;
+    height: 17px;
+    position: absolute;
+    top:45%;
+    left:4%;
+    background: url(../images/mima.jpg) no-repeat;
+    background-size: 100% 100%;
+}
+.wylm_dl .wylm_inp {
+    width: 100%;
+    height: 60px;
+    border-bottom: 1px solid #eee;
+    padding-left: 10%;
+    font-size: 16px;
+}
+.wylm_dl .icon_xiaoqu {
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    top: 3%;
+    right: 7%;
+    text-align: center;
+    line-height: 40px;
+    font-size: 20px;
+}
+.wylm_dl .wylm_xiaoqu {
+    width: 100%;
+    border:1px solid #ccc;
+    background: #fff;
+    font-size: 16px;
+    display:none;
+}
+.wylm_dl .wylm_xiaoqu li {
+    padding-left: 5%;
+}
+ .wylm_xiaoqu li:hover {
+    background: #666;
+ }
+.wylm_dl form a {
+    position: absolute;
+    top:43%;
+    right: 10px;
+    text-decoration: underline;
+}
+.wylm_dl .wylm_button{
+    width: 85%;
+    height: 43px;
+    background-color: #bc1b21;
+    color:#fff;
+    border-radius: 5px;
+    margin-left: 7%;
+    margin-top: 5%;
+    font-size: 1.5em;
+    font-weight: 700;
+}
+
+/*缴费成功*/
+ .wylm_t {
+    width: 100%;
+    height: 75px;
+    text-align: center;
+    margin-top: 20%;
+ }
+.wylm_dl img {
+    width: 50px;
+    height: 50px;
+    margin:0 auto;
+}
+.wylm_dl h2 {
+    color:#bc1b21;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+.wylm_middle {
+    width: 220px;
+    margin: 10px auto;
+}
+.wylm_middle ul {
+    width: 100%;
+    padding-top: 10%;
+}
+.wylm_middle li {
+    font-size: 14px;
+    padding-bottom: 4%;
+}
+.wylm_bot {
+    width: 100%;
+}
+.wylm_dl form .wylm_btn1 {
+    background-color: #3e3a39;
+}
+
+/*缴费确认*/
+.wylm_ul {
+    margin-top: 50px;
+    width: 100%;
+    background-color: #fff;
+}
+.wylm_ul li {
+    border-bottom: 1px solid #eee;
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    padding-left: 10%;
+}
+.wylm_zhifu .wylm_btn2 {
+    background-color: #eee;
+    border:1px solid #bc1b21;
+    color: #bc1b21;
+}
+/*业主信息认证*/
+.wylm_dl .wylm_yzm {
+    border: 1px solid #bc1b21;
+    color: #bc1b21;
+    text-align: center;
+    border-radius: 5px;
+    text-decoration: none;
+    top: 54%;
+    width: 90px;
+    height: 35px;
+    line-height: 30px;
+    cursor:pointer;
+}
+.wylm_dl .wylm_jisuan {
+    display: block;
+    width: 100px;
+    height: 35px;
+    position: absolute;
+    top: 54%;
+    left: 65%;
+}
+/*缴纳物业*/
+.wylm_date {
+    background: #fff;
+    margin-top: 10px;
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    padding-left: 10%;
+}
+.wylm_date input {
+    width: 27%;
+    height: 30px;
+    border:1px solid #e0e0e0;
+    padding-left: 5px;
+}
+.wylm_jifen {
+    padding-left: 5%;
+    height: 40px;
+    line-height: 40px;
+    font-size: 16px;
+}
+.wylm_jifen span {
+    padding-right: 5%;
+    float: right;
+    color:#ccc;
+    font-size: 12px;
+}
+.wylm_dikou {
+    padding-left: 5%;
+    color:#ccc;
+    font-size: 12px;
+}
+
+/*居住小区select*/
+.zselect{
+    width:100%;
+    height:60px;
+    line-height:60px;
+    position: relative;
+}
+.zselect ul{
+    width:100%;
+    position: absolute;
+    z-index: 999;
+    border-bottom: 1px solid #eee;
+    background: #fff;
+}
+.zselect ul li{
+    width:100%;
+    height:60px;
+    line-height:60px;
+    padding-left:10%;
+    background: #fff;
+    display: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+.zselect ul li:hover{
+    background: #ccc;
+}
+.zselect ul li.on{
+    display: block;
+     color: #a9a9a9;
+     font-family: "simson";
+ }
+ .zselect ul li.icon_on{
+    background:url(../images/107.gif) no-repeat 90% center;
+ }
+
+
+/*便民缴费*/
+.wylm_nav {
+    width: 100%;
+     height: 250px;
+    margin-top:50px;
+    background: #fff;
+
+}
+.wylm_nav ul {
+    width: 100%;
+    text-align: center;
+
+}
+.wylm_nav ul li {
+    width: 33.3%;
+    height: 125px;
+    line-height: 60px;
+    float: left;
+    border-bottom:1px solid #e6e6e6;
+    border-left:1px solid #e6e6e6;
+}
+.wylm_nav ul li a {
+    display:block;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+}
+.wylm_nav ul li img {
+    display:block;
+    width:50px;
+    height: 50px;
+    margin-top: 20px;
+}
+
+/*弹出层*/
+.wylm_win{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0,0,0,0.4);
+    z-index: 1001;
+}
+
+.wylm_win .wylm_win_box{
+    width: 85%;
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    margin: 0  auto;
+    padding:0 5%;
+    margin-top:40%;
+}
+.wylm_win .wylm_win_box .wylm_win_box_text{
+    line-height: 75px;
+    color: #666;
+    text-align: center;
+    font-size: 16px;
+    border-bottom: 1px solid #e0e0e0;
+    margin-bottom: 10px;
+}
+.wylm_win .wylm_win_box .wylm_btn_box{
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+.wylm_win .wylm_win_box .wylm_btn_box .cancel{
+    width: 45%;
+    height:36px;
+    float: left;
+    margin-right: 10%;
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    color: #888;
+    text-align: center;
+    line-height: 36px;
+}
+.wylm_win .wylm_win_box .wylm_btn_box .submit{
+    width: 45%;
+    height:36px;
+    float: left;
+    background: #d8505c;
+    border-radius: 4px;
+    color: #fff;
+    text-align: center;
+    line-height: 36px;
+}
+
+/*跳出来动画*/
+@-webkit-keyframes jumpOut{
+    0%{
+        opacity: 0;
+        transform: translateY(-2000px);
+        -webkit-transform: translateY(-2000px);
+    }
+    60%{
+        opacity: 1;
+        transform: translateY(30px);
+        -webkit-transform: translateY(30px);
+    }
+    75%{
+        transform: translateY(-10px);
+        -webkit-transform: translateY(-10px);
+    }
+    90%{
+        transform: translateY(5px);
+        -webkit-transform: translateY(5px);
+    }
+    100%{
+        opacity: 1;
+        transform: none;
+        -webkit-transform: none;
+    }
+}
+.jumpOut{
+    animation:jumpOut 1s ease;
+}
