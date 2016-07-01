@@ -1,57 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0"/>
-  <title>缴费</title>
-  <link rel="stylesheet" href="css/wylm.css">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0" />
+		<title>缴费</title>
+		<link rel="stylesheet" href="css/wylm.css">
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+	</head>
+	<body>
+		<div class="wylm_dl">
+			  <div class="wylm_header">
+			        <a href="#" class="icon_back">
+			        <img src="images/icon_back.png" alt="返回">
+			        <span class="wylm_back">返回</span>
+			        </a>
+			        <h3>缴费</h3>
+			        <a href="#" class="icon_menu">...</a>
+			  </div>
+			<form action="">
+				<ul id="main_box">
+					<li class="select_box">
+						<span class="span1">请选择居住小区</span>
+						<ul class="son_ul">
+							<li>选项一</li>
+							<li>选项二</li>
+							<li>选项三</li>
+							<li>选项四</li>
+							<li>选项五</li>
+						</ul>
+					</li>
+				</ul>
+				<input type="text" placeholder="开户银行" class="wylm_inp" />
+				<input type="text" placeholder="请输入银行卡号" class="wylm_inp" />
+				<input type="text" placeholder="请输入支行名称" class="wylm_inp" />
+				<a href="jnwuye.html"><input type="button" value="去缴费" class="wylm_button"></a>
+			</form>
+		</div>
+	</body>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			var state=true;
+			$('.son_ul').hide(); //初始ul隐藏
+			$('.select_box .span1').click(function() { //鼠标移动函数
+				$(this).parent().find('li').hover(function() {
+					$(this).addClass('hover')
+				}, function() {
+					$(this).removeClass('hover')
+				});
+				//li的hover效果
+				if (state){
+					state=false;
+					$(this).parent().find('ul.son_ul').slideDown(); //找到ul.son_ul显示
 
-</head>
-<body>
-<div class="wylm_dl">
-  <div class="wylm_header">
-        <a href="#" class="icon_back">＜返回</a>
-        <h3>缴费</h3>
-        <a href="#" class="icon_menu">...</a>
-  </div>
-  <form action="">
-  <div class="zselect">
-<!--     <div class="icon_xiaoqu">∨</div> -->
-      <ul>
-      <li class="on icon_on">居住小区</li>
-      <li>居民小区1</li>
-      <li>居民小区2</li>
-      <li>居民小区3</li>
-    </ul>
-  </div>
-    <input type="text" placeholder="开户银行" class="wylm_inp" />
-    <input type="text" placeholder="输入银行卡号"  class="wylm_inp"/>
-    <input type="text" placeholder="输入支行名称"  class="wylm_inp"/>
-     <input type="button" value="去缴费" class="wylm_button">
-  </form>
-</div>
-</body>
+				}else{
+					$(this).parent().find('ul.son_ul').slideUp();
+					state=true;
+				}
+			}, function() {});
+			$('ul.son_ul li').click(function() {
+				state=true;
+				$(this).parents('li').find('.span1').html($(this).html());
+				$(this).parents('li').find('.span1').css("color","#000");
+				$(this).parents('li').find('ul').slideUp();
+			});
+		});
+	</script>
+
 </html>
-<script>
-window.onload = function(){
-  xiaoquSelect("li");
-}
-
-function xiaoquSelect(li){
-   var lis = document.getElementsByClassName('zselect')[0].getElementsByTagName(li);
-    for(var i = 0; i < lis.length; i++){
-        lis[i].onclick = function(){
-            if(this.parentNode.getAttribute('_zxs') == 'show'){
-                for(var j = 0; j < lis.length; j++){ lis[j].style.display = 'none';}
-                this.className = 'on';
-                this.style.color="#000";
-                this.style.display = 'block';
-                this.parentNode.setAttribute('_zxs','hide');
-            }else{
-                for(var j = 0; j < lis.length; j++){ lis[j].style.display = 'block';}
-                this.parentNode.setAttribute('_zxs','show');
-            }
-        };
-    }
-}
-</script>

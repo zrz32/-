@@ -6,12 +6,15 @@
     -webkit-tap-highlight-color: transparent;
     -webkit-box-sizing: border-box;
 }
+
 body{
-    font-size: 14px;
+    font-size: 16px;
     font-family: "Microsoft YaHei",sans-serif;
     color: #000;
     background-color: #eee;
 }
+
+
 a{
     text-decoration: none;
     color: #000;
@@ -23,6 +26,21 @@ input,textarea,select,option{
     border: none;
     resize: none;
     outline: none;
+}
+
+
+/*设置placeholder的字体为微软雅黑*/
+input::-webkit-input-placeholder{
+　font-family:"Microsoft yahei";
+}
+input:-moz-placeholder{
+　font-family:"Microsoft yahei";
+}
+input::-moz-placeholder{
+    font-family:"Microsoft yahei";
+}
+input:-ms-input-placeholder{
+    font-family:"Microsoft yahei";
 }
 .clearfix::before,
 .clearfix::after{
@@ -38,7 +56,7 @@ input,textarea,select,option{
 .wylm_header {
     width: 100%;
     height: 40px;
-    background: rgba(0,0,0,.6);
+    background: #1b1b1f;
     position: fixed;
     top: 0;
     left:0;
@@ -50,12 +68,25 @@ input,textarea,select,option{
     color:#fff;
     padding-left: 3%;
     line-height: 40px;
+    font-size: 16px;
+    font-weight: 400;
+}
+.wylm_header .icon_back .wylm_back {
+    padding-left: 18px;
+}
+.wylm_header .icon_back img {
+    width: 14px;
+    height: 20px;
+    position:absolute;
+    top: 10px;
+    left:12px;
 }
 .wylm_header h3 {
-    font-size: 16px;
+    font-size: 18px;
     color:#fff;
     line-height: 40px;
     text-align: center;
+    font-weight: 400;
 }
 .wylm_header .icon_menu {
     color:#fff;
@@ -71,10 +102,12 @@ input,textarea,select,option{
     height: 100%;
     position: absolute;
     z-index:-1;
+    overflow: hidden;
 }
 .wylm_layout img {
     width: 100%;
-    height: 99.7%;
+    height: 100%;
+    overflow: hidden;
 }
 .wylm_btn{
     width: 80%;
@@ -108,7 +141,7 @@ input,textarea,select,option{
     margin-top: 50px;
     position: relative;
 }
-.wylm_dl form span {
+.wylm_dl form .wylm_sp {
     width: 12px;
     height: 20px;
     position: absolute;
@@ -156,7 +189,7 @@ input,textarea,select,option{
  .wylm_xiaoqu li:hover {
     background: #666;
  }
-.wylm_dl form a {
+.wylm_dl form .password_a {
     position: absolute;
     top:43%;
     right: 10px;
@@ -224,6 +257,10 @@ input,textarea,select,option{
     line-height: 60px;
     padding-left: 10%;
 }
+.wylm_ul li span {
+    padding-left: 3%;
+    color:#ccc;
+}
 .wylm_zhifu .wylm_btn2 {
     background-color: #eee;
     border:1px solid #bc1b21;
@@ -231,6 +268,7 @@ input,textarea,select,option{
 }
 /*业主信息认证*/
 .wylm_dl .wylm_yzm {
+    display: block;
     border: 1px solid #bc1b21;
     color: #bc1b21;
     text-align: center;
@@ -240,7 +278,9 @@ input,textarea,select,option{
     width: 90px;
     height: 35px;
     line-height: 30px;
-    cursor:pointer;
+    cursor: pointer;
+    position: absolute;
+    left: 65%;
 }
 .wylm_dl .wylm_jisuan {
     display: block;
@@ -282,43 +322,6 @@ input,textarea,select,option{
     color:#ccc;
     font-size: 12px;
 }
-
-/*居住小区select*/
-.zselect{
-    width:100%;
-    height:60px;
-    line-height:60px;
-    position: relative;
-}
-.zselect ul{
-    width:100%;
-    position: absolute;
-    z-index: 999;
-    border-bottom: 1px solid #eee;
-    background: #fff;
-}
-.zselect ul li{
-    width:100%;
-    height:60px;
-    line-height:60px;
-    padding-left:10%;
-    background: #fff;
-    display: none;
-    cursor: pointer;
-    font-size: 16px;
-}
-.zselect ul li:hover{
-    background: #ccc;
-}
-.zselect ul li.on{
-    display: block;
-     color: #a9a9a9;
-     font-family: "simson";
- }
- .zselect ul li.icon_on{
-    background:url(../images/107.gif) no-repeat 90% center;
- }
-
 
 /*便民缴费*/
 .wylm_nav {
@@ -438,3 +441,49 @@ input,textarea,select,option{
 .jumpOut{
     animation:jumpOut 1s ease;
 }
+
+/*居住小区select*/
+#main_box {
+  background: #fff;
+}
+  .select_box{
+    width: 100%;
+    height: 60px;
+    background: url(../images/107.gif) no-repeat 80% center;
+    position: relative;
+  }
+  .select_box .span1 {
+    display:block;
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    cursor: pointer;
+    overflow:hidden;
+    padding-left: 10%;
+    font-size: 16px;
+    color: #a9a9a9;
+    font-family: simsun;
+  }
+  .son_ul {
+    width: 100%;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    border:1px solid #ccc;
+    background: #fff;
+  }
+    .son_ul li {
+      width: 100%;
+      height: 30px;
+      line-height: 30px;
+      cursor: pointer;
+      padding-left:10px;
+    }
+    .hover {
+      background: #ccc;
+    }
+.select_box ul li {
+    cursor:pointer;
+}
+
+
